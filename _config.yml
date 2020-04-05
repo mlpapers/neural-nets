@@ -1,7 +1,1 @@
-theme: jekyll-theme-minimal
-title: ML Papers
-#logo: /assets/img/logo.png
-description: Machine learning papers
-#google_analytics:
-show_downloads: false
-absolute_url: https://mlpapers.github.io
+remote_theme: mlpapers/minimal
