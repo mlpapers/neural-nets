@@ -40,9 +40,50 @@
   - [Cresceptron: A Self-organizing  Neural Network Which Grows Adaptively](http://www.cse.msu.edu/~weng/research/CresceptronIJCNN1992.pdf) (1992) *John (Juyang) Weng, Narendra Ahuja, Thomas S. Huang*
 
 ### Generative Adversarial Networks (GAN)
-  - [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661v1.pdf) (2014) *Ian J. Goodfellow,  Jean Pouget-Abadie∗, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair†, Aaron Courville, Yoshua Bengio*
+- [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661v1.pdf) (2014) *Ian J. Goodfellow,  Jean Pouget-Abadie∗, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair†, Aaron Courville, Yoshua Bengio*
+- [Time-series Generative Adversarial Networks](https://papers.nips.cc/paper/8789-time-series-generative-adversarial-networks.pdf) (2019) *J. Yoon, D. Jarrett, M. van der Schaar*
+- **Conditional GAN**
+  - [Probabilistic Forecasting of Sensory Data with Generative Adversarial Networks](https://arxiv.org/abs/1903.12549) (2019) *A. Koochali, P. Schichtel, S. Ahmed, A. Dengel*
 
 ### Bayesian Neural Networks (BNN)
+
+### Weightless Neural Networks (WNN)
+- Based on Random Access Memory (RAM) nodes
+- [Advances in Weightless Neural Systems](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2014-7.pdf) (2014) *F.M.G. França, M. De Gregorio, P.M.V. Lima, W.R. de Oliveira*
+- **WiSARD** 
+- **PLN** Probabilistic Logic Nodes
+- **GSN** Goal Seeking Neurons
+- **GRAM** 
+
+### Activation functions
+- **Sigmoid**
+- **HardSigmoid**
+- **SiLU, dSiLU**
+- **Tanh, HardTanh**
+- **Softmax**
+- **Softplus**
+- **Softsign**
+- **ReLU** Rectified Linear Unit
+  - [Rectified Linear Units Improve Restricted Boltzmann Machines](https://www.cs.toronto.edu/~hinton/absps/reluICML.pdf) (2010) *V. Nair, G.E. Hinton*
+  - [Deep Sparse Rectifier Neural Networks](http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf) (2011) *X. Glorot, A. Bordes, Y. Bengio*
+- **LReLU** Leaky ReLU
+  - [Rectifier Nonlinearities Improve Neural Network Acoustic Models](https://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf) (2013) *A.L. Maas, A.Y. Hannun, A.Y. Ng*
+- **PReLU** Parametric ReLU
+  - [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification](https://arxiv.org/pdf/1502.01852.pdf) (2015) *Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun*
+- **RReLU** Randomized ReLU
+  - [Empirical Evaluation of Rectified Activations in Convolutional Network](https://arxiv.org/pdf/1505.00853.pdf) (2015) *Bing Xu, Naiyan Wang, Tianqi Chen, Mu Li*
+- **SReLU** 
+- **ELU**
+  - [Fast and Accurate Deep Network Learning by Exponential Linear Units](https://arxiv.org/pdf/1511.07289.pdf) (2015) *Djork-Arné Clevert, Thomas Unterthiner, Sepp Hochreiter*
+- **PELU**
+  - [Parametric Exponential Linear Unit forDeep Convolutional Neural Network](https://arxiv.org/pdf/1605.09332v1.pdf) (2016) *L. Trottier, P. Giguère, B. Chaib-draa*
+- **SELU**
+- **Maxout**
+- **Mish**
+  - [Mish: A Self Regularized Non-Monotonic Neural Activation Function](https://arxiv.org/pdf/1908.08681.pdf) (2019) *Diganta Misra*
+- **Swish**
+- **ELiSH**
+- **HardELiSH**
 
 ### Inference
 - **Weight guessing**
@@ -59,5 +100,11 @@
   - [Adaptive dropout for training deep neural networks](https://papers.nips.cc/paper/5032-adaptive-dropout-for-training-deep-neural-networks.pdf) (2013) *L.J. Ba, B. Frey*
   - [The Dropout Learning Algorithm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/pdf/nihms-570835.pdf) (2014) *P. Baldi, P. Sadowski*
   - [Fast dropout training](https://nlp.stanford.edu/pubs/sidaw13fast.pdf) (2013) *S.I. Wang, C.D. Manning*
+
+### [Ensembles](https://github.com/mlpapers/ensemble-learning)
+- [Neural Network Ensembles](http://machine-learning.martinsewell.com/ensembles/HansenSalamon1990.pdf) (1990) *L. K. Hansen, P. Salamon*
+- [When Networks Disagree: Ensemble Methods for Hybrid Neural Networks](https://www.researchgate.net/publication/2438296_When_Networks_Disagree_Ensemble_Methods_for_Hybrid_Neural_Networks) (1993) *M.P. Perrone, L.N. Cooper*
+- [Neural Network Ensembles, Cross Validation, and Active Learning](https://papers.nips.cc/paper/1001-neural-network-ensembles-cross-validation-and-active-learning.pdf) (1995) *A. Krogh, J. Vedelsby*
+- [When Ensembling Smaller Models is More Efficient than SingleLarge Models](https://arxiv.org/pdf/2005.00570.pdf) (2020) *D. Kondratyuk, M. Tan, M. Brown, B. Gong*
 
 ### [Optimization](https://github.com/mlpapers/optimization)
