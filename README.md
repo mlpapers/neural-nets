@@ -28,11 +28,12 @@
 - **Competitive learning**
   - [Feature Discovery by Competitive Learning](http://csjarchive.cogsci.rpi.edu/1985v09/i01/p0075p0112/MAIN.PDF) (1985) *David E. Rumelhart*
 - **Autoencoders**
-  - From Deep Learning book - [Autoencoders (ch. 14)](http://www.deeplearningbook.org/contents/autoencoders.html) (2016) *Ian Goodfellow, Yoshua Bengio, Aaron Courville*
   - [Modular learning in neural networks](https://www.aaai.org/Papers/AAAI/1987/AAAI87-050.pdf) (1987) *D.H. Ballard*
+  - [Extracting and composing robust features with denoising autoencoders](https://www.iro.umontreal.ca/~vincentp/Publications/denoising_autoencoders_tr1316.pdf) (2008) *P. Vincent, H. Larochelle, Y. Bengio, P.A. Manzagol*
+  - From Deep Learning book - [Autoencoders (ch. 14)](http://www.deeplearningbook.org/contents/autoencoders.html) (2016) *Ian Goodfellow, Yoshua Bengio, Aaron Courville*
   - [An Introduction to Variational Autoencoders](https://arxiv.org/pdf/1906.02691.pdf) (2019) *Diederik P. Kingma, Max Welling*
   - [Contractive Auto-Encoders: Explicit Invariance During Feature Extraction](https://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf) (2011) *S. Rifai, P. Vincent, X. Muller, X. Glorot, Y. Bengio*
-  - [Extracting and composing robust features with denoising autoencoders](https://www.iro.umontreal.ca/~vincentp/Publications/denoising_autoencoders_tr1316.pdf) (2008) *P. Vincent, H. Larochelle, Y. Bengio, P.A. Manzagol*
+  - [Deep AutoRegressive Networks](https://arxiv.org/pdf/1310.8499.pdf) (2014) *Karol Gregor, Ivo Danihelka, Andriy Mnih, Charles Blundell, Daan Wierstra*
 - **Denoising Autoencoders**
 - **VAE** Variational autoencoders
 - **SOM** Self-organizing maps
@@ -46,6 +47,17 @@
   - [Probabilistic Forecasting of Sensory Data with Generative Adversarial Networks](https://arxiv.org/abs/1903.12549) (2019) *A. Koochali, P. Schichtel, S. Ahmed, A. Dengel*
 
 ### Bayesian Neural Networks (BNN)
+- [A Practical Bayesian Framework for Backpropagation Networks](https://authors.library.caltech.edu/13793/1/MACnc92b.pdf) (1992) *David J. C. MacKay*
+- [Bayesian Learning for Neural Networks](http://www.csri.utoronto.ca/~radford/ftp/thesis.pdf) (1995) *R.M. Neal*
+- [Probable networks and plausible predictions - a review of practical Bayesian methods for supervised neural networks](https://pdfs.semanticscholar.org/3ce9/da2d2182a2fbc4b460bdb56d3c34110b3e39.pdf) (1995) *David J. C. MacKay*
+- [Practical Variational Inference for Neural Networks](https://www.cs.toronto.edu/~graves/nips_2011.pdf) (2011) *Alex Graves*
+- [Weight Uncertainty in Neural Networks](https://arxiv.org/pdf/1505.05424.pdf) (2015) *Charles Blundell, Julien Cornebise, Koray Kavukcuoglu, Daan Wierstra*
+- [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](https://arxiv.org/pdf/1506.02142.pdf) (2016) *Y. Gal, Z. Ghahramani*
+- [Stochastic Gradient Descent as Approximate Bayesian Inference](http://www.cs.columbia.edu/~blei/papers/MandtHoffmanBlei2017.pdf) (2017) *S. Mandt, M.D. Hoffman, D.M. Blei*
+- [Deep neural networks as Gaussian Processes](https://arxiv.org/pdf/1711.00165.pdf) (2018) *Jaehoon Lee, Yasaman Bahri, Roman Novak, Samuel S. Schoenholz, Jeffrey Pennington, Jascha Sohl-Dickstein*
+- [Noisy Natural Gradient as Variational Inference](https://arxiv.org/pdf/1712.02390.pdf) (2018) *Guodong Zhang, Shengyang Sun, David Duvenaud, Roger Grosse*
+- [Fast and Scalable Bayesian Deep Learning by Weight-Perturbation in Adam](https://arxiv.org/abs/1806.04854) (2018) *Mohammad Emtiyaz Khan, Didrik Nielsen, Voot Tangkaratt, Wu Lin, Yarin Gal, Akash Srivastava*
+- [Understanding Priors in Bayesian Neural Networks at the Unit Level](https://arxiv.org/pdf/1810.05193.pdf) (2019) *Mariia Vladimirova, Jakob Verbeek, Pablo Mesejo, Julyan Arbel*
 
 ### Weightless Neural Networks (WNN)
 - Based on Random Access Memory (RAM) nodes
@@ -96,7 +108,7 @@
 - **Pretraining**
   - [Why Does Unsupervised Pre-training Help Deep Learning?](http://jmlr.csail.mit.edu/papers/volume11/erhan10a/erhan10a.pdf) (2010) *D. Erhan, Y. Bengio, A. Courville, P.A. Manzagol, P. Vincent, S. Bengio*
 - **Dropout**
-  - [Improving neural networks by preventingco-adaptation of feature detectors](https://arxiv.org/pdf/1207.0580.pdf) (2012) *G. E. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, R. R. Salakhutdinov*
+  - [Improving neural networks by preventing co-adaptation of feature detectors](https://arxiv.org/pdf/1207.0580.pdf) (2012) *G. E. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, R. R. Salakhutdinov*
   - [Adaptive dropout for training deep neural networks](https://papers.nips.cc/paper/5032-adaptive-dropout-for-training-deep-neural-networks.pdf) (2013) *L.J. Ba, B. Frey*
   - [The Dropout Learning Algorithm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/pdf/nihms-570835.pdf) (2014) *P. Baldi, P. Sadowski*
   - [Fast dropout training](https://nlp.stanford.edu/pubs/sidaw13fast.pdf) (2013) *S.I. Wang, C.D. Manning*
