@@ -36,6 +36,9 @@
   - [Deep AutoRegressive Networks](https://arxiv.org/pdf/1310.8499.pdf) (2014) *Karol Gregor, Ivo Danihelka, Andriy Mnih, Charles Blundell, Daan Wierstra*
 - **Denoising Autoencoders**
 - **VAE** Variational autoencoders
+  - [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114.pdf) (2014) *Diederik P Kingma, Max Welling*
+  - [Tutorial on Variational Autoencoders](https://arxiv.org/pdf/1606.05908.pdf) (2016) *Carl Doersch*
+  - [Variational Autoencoder for Deep Learning of Images, Labels and Captions](https://papers.nips.cc/paper/6528-variational-autoencoder-for-deep-learning-of-images-labels-and-captions.pdf) (2016) *Yunchen Pu, Zhe Gan, Ricardo Henao, Xin Yuan, Chunyuan Li, Andrew Stevens, Lawrence Carin*
 - **SOM** Self-organizing maps
 - **Cresceptron** (Max-Pooling layers)
   - [Cresceptron: A Self-organizing  Neural Network Which Grows Adaptively](http://www.cse.msu.edu/~weng/research/CresceptronIJCNN1992.pdf) (1992) *John (Juyang) Weng, Narendra Ahuja, Thomas S. Huang*
