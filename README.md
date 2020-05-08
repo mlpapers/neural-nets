@@ -11,6 +11,9 @@
 - **GMDH** Group method of data handling ([Website](http://gmdh.net/), [Wiki](https://en.wikipedia.org/wiki/Group_method_of_data_handling))
   - [Polynomial Theory of Complex Systems](http://www.gmdh.net/articles/history/polynomial.pdf) (1971) *Ivakhnenko A.G.*
   - [The Review of Problems Solvable by Algorithms of the Group Method of Data Handling](http://gmdh.net/articles/review/algorith.pdf) (1995) *Ivakhnenko A.G., Ivakhnenko G.A.*
+- **Binarized Neural Networks**
+  - [Binarized Neural Networks: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1](https://arxiv.org/abs/1602.02830) (2016) *Matthieu Courbariaux, Itay Hubara, Daniel Soudry, Ran El-Yaniv, Yoshua Bengio*
+  - [How to Train a Compact Binary Neural Network with High Accuracy?](https://www.ganghua.org/publication/AAAI17.pdf) (2017) *Wei Tang, Gang Hua, Liang Wang*
 
 ### Convolutional Neural Networks (CNN)
   - One of the papers on convolutional nets - [Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position] (https://www.cs.princeton.edu/courses/archive/spr08/cos598B/Readings/Fukushima1980.pdf) (1980) *K. Fukushima*
@@ -108,6 +111,11 @@
 - **BP** Back-propagation
   - [Learning representations by back-propagating errors](http://www.cs.toronto.edu/~hinton/absps/naturebp.pdf) (1986) *David E. Rumelhart, Geoffrey E. Hinton, Ronald J. Williams*
   - [Backpropagation Applied to Handwritten Zip Code Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf) (1989) *Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, L. D. Jackel*
+- **Pruning** - reduces computational cost, improves generalization
+  - [Optimal Brain Damage](http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf) (1990) *Yann Le Cun, John S. Denker, Sara A. Solla*
+  - [Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/pdf/1506.02626.pdf) (2015) *Song Han, Jeff Pool, John Tran, William J. Dally*
+  - [Pruning Convolutional Neural Networks for Resource Efficient Inference](https://arxiv.org/pdf/1611.06440.pdf) (2017) *Pavlo Molchanov, Stephen Tyree, Tero Karras, Timo Aila, Jan Kautz*
+  - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/pdf/1712.01312.pdf) (2018) *Christos Louizos, Max Welling, Diederik P. Kingma*
 - **Pretraining**
   - [Why Does Unsupervised Pre-training Help Deep Learning?](http://jmlr.csail.mit.edu/papers/volume11/erhan10a/erhan10a.pdf) (2010) *D. Erhan, Y. Bengio, A. Courville, P.A. Manzagol, P. Vincent, S. Bengio*
 - **Dropout**
