@@ -124,6 +124,16 @@
   - [The Dropout Learning Algorithm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/pdf/nihms-570835.pdf) (2014) *P. Baldi, P. Sadowski*
   - [Fast dropout training](https://nlp.stanford.edu/pubs/sidaw13fast.pdf) (2013) *S.I. Wang, C.D. Manning*
 
+### Compression
+- **Knowledge Distillation**
+  - Large neural networks (teacher networks) transfer knowledge to smaller networks (called student networks)
+- **Neural Network Pruning**
+  - Removing unimportant weights
+- **Quantization**
+  - Reducing the number of bits used to store the weights
+- **Software**
+  - [KD-Lib: A PyTorch library for Knowledge Distillation, Pruning and Quantization](https://arxiv.org/pdf/2011.14691.pdf) (2020) *Het Shah, Avishree Khare, Neelay Shah, Khizir Siddiqui*
+
 ### [Ensembles](https://github.com/mlpapers/ensemble-learning)
 - [Neural Network Ensembles](http://machine-learning.martinsewell.com/ensembles/HansenSalamon1990.pdf) (1990) *L. K. Hansen, P. Salamon*
 - [When Networks Disagree: Ensemble Methods for Hybrid Neural Networks](https://www.researchgate.net/publication/2438296_When_Networks_Disagree_Ensemble_Methods_for_Hybrid_Neural_Networks) (1993) *M.P. Perrone, L.N. Cooper*
