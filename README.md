@@ -64,6 +64,7 @@
 - [Noisy Natural Gradient as Variational Inference](https://arxiv.org/pdf/1712.02390.pdf) (2018) *Guodong Zhang, Shengyang Sun, David Duvenaud, Roger Grosse*
 - [Fast and Scalable Bayesian Deep Learning by Weight-Perturbation in Adam](https://arxiv.org/abs/1806.04854) (2018) *Mohammad Emtiyaz Khan, Didrik Nielsen, Voot Tangkaratt, Wu Lin, Yarin Gal, Akash Srivastava*
 - [Understanding Priors in Bayesian Neural Networks at the Unit Level](https://arxiv.org/pdf/1810.05193.pdf) (2019) *Mariia Vladimirova, Jakob Verbeek, Pablo Mesejo, Julyan Arbel*
+- [Bayesian Deep Learning and a Probabilistic Perspective of Generalization](https://arxiv.org/pdf/2002.08791.pdf) (2020) *Andrew Gordon Wilson, Pavel Izmailov*
 
 ### Weightless Neural Networks (WNN)
 - Based on Random Access Memory (RAM) nodes
