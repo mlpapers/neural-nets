@@ -1,3 +1,10 @@
+---
+title: "Neural Networks, Deep Learning"
+aliases: ["Deep learning", "Neural nets", "DNNs"]
+tags:
+  - deep-learning
+  - neural-networks
+---
 # Neural networks, deep learning papers
 
 - **Overview**
@@ -135,10 +142,20 @@
 - **Software**
   - [KD-Lib: A PyTorch library for Knowledge Distillation, Pruning and Quantization](https://arxiv.org/pdf/2011.14691.pdf) (2020) *Het Shah, Avishree Khare, Neelay Shah, Khizir Siddiqui*
 
-### [Ensembles](https://github.com/mlpapers/ensemble-learning)
+### Ensembles
 - [Neural Network Ensembles](http://machine-learning.martinsewell.com/ensembles/HansenSalamon1990.pdf) (1990) *L. K. Hansen, P. Salamon*
 - [When Networks Disagree: Ensemble Methods for Hybrid Neural Networks](https://www.researchgate.net/publication/2438296_When_Networks_Disagree_Ensemble_Methods_for_Hybrid_Neural_Networks) (1993) *M.P. Perrone, L.N. Cooper*
 - [Neural Network Ensembles, Cross Validation, and Active Learning](https://papers.nips.cc/paper/1001-neural-network-ensembles-cross-validation-and-active-learning.pdf) (1995) *A. Krogh, J. Vedelsby*
 - [When Ensembling Smaller Models is More Efficient than SingleLarge Models](https://arxiv.org/pdf/2005.00570.pdf) (2020) *D. Kondratyuk, M. Tan, M. Brown, B. Gong*
 
-### [Optimization](https://github.com/mlpapers/optimization)
+
+## Related Topics
+- [Optimization](https://mlpapers.org/optimization/)
+- [Ensemble Learning](https://mlpapers.org/ensemble-learning/)
+- [Bayesian Inference](https://mlpapers.org/bayesian-inference/)
+- [Reinforcement Learning](https://mlpapers.org/reinforcement-learning/)
+- [Interpretability](https://mlpapers.org/interpretability/)
+- [NLP](https://mlpapers.org/nlp/)
+- [Computer Vision](https://mlpapers.org/computer-vision/)
+- [Generative Models](https://mlpapers.org/generative-models/)
+- [Graph Neural Networks](https://mlpapers.org/graph-neural-networks/)
