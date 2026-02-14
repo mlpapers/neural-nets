@@ -1,10 +1,3 @@
----
-title: "Neural Networks, Deep Learning"
-aliases: ["Deep learning", "Neural nets", "DNNs"]
-tags:
-  - deep-learning
-  - neural-networks
----
 # Neural networks, deep learning papers
 
 - **Overview**
