@@ -22,17 +22,38 @@
 
 ## Sequence models, attention, and implicit depth
 
+### Recurrent sequence models
+
 - **LSTM** - Uses memory cells and multiplicative gates to preserve error flow over long delays. The original design targets vanishing gradients in recurrent sequence learning. [Hochreiter and Schmidhuber 1997](<https://doi.org/10.1162/neco.1997.9.8.1735> "Long Short-Term Memory; Neural Comput.").
     - **Bidirectional LSTM** - Combines forward and backward sequence context for framewise phoneme classification. Access to later inputs must match the deployment setting. [Graves and Schmidhuber 2005](<https://www.cs.toronto.edu/~graves/nn_2005.pdf> "Framewise phoneme classification with bidirectional LSTM and other neural network architectures; Neural Networks").
-- **Transformer** - Builds sequence transduction around attention, removing recurrence and convolution from the architecture. The original encoder-decoder is evaluated on translation and parsing. [Vaswani et al. 2017](<https://arxiv.org/abs/1706.03762> "Attention Is All You Need; NeurIPS").
-- **Neural ODEs** - Parameterizes hidden-state derivatives with a neural network and computes outputs with an ODE solver. Numerical tolerances and solver behavior become part of model execution. [Chen et al. 2018](<https://arxiv.org/abs/1806.07366> "Neural Ordinary Differential Equations; NeurIPS").
-- **Deep equilibrium models** - Finds a weight-tied network's equilibrium by root finding and differentiates it implicitly. Replaces an explicit stack of layers with a fixed-point computation. [Bai et al. 2019](<https://arxiv.org/abs/1909.01377> "Deep Equilibrium Models; NeurIPS").
+    - **xLSTM** - Adds exponential gates and scalar or matrix memories to LSTM. Matrix memory supports parallel training. At 1.3B parameters on SlimPajama, extending 2K training contexts to 16K yields lower perplexity than tested Mamba and RWKV-4 baselines. [Beck et al. 2024](<https://proceedings.neurips.cc/paper_files/paper/2024/file/c2ce2f2701c10a2b2f2ea0bfa43cfaa3-Paper-Conference.pdf> "xLSTM: Extended Long Short-Term Memory; NeurIPS").
 - **S4** - Uses a structured state-space parameterization to model long sequences efficiently, reducing its core computation to a Cauchy kernel. [Gu et al. 2022](<https://arxiv.org/abs/2111.00396> "Efficiently Modeling Long Sequences with Structured State Spaces; ICLR").
 - **Mamba** - Makes state-space parameters depend on the input, allowing selective retention and forgetting. Uses a hardware-aware recurrent computation with linear scaling in sequence length. [Gu and Dao 2023](<https://arxiv.org/abs/2312.00752> "Mamba: Linear-Time Sequence Modeling with Selective State Spaces; arXiv").
     - **Mamba-2** - Connects structured state-space models and attention variants through semiseparable matrices. Uses this duality to derive a revised selective state-space layer. [Dao and Gu 2024](<https://arxiv.org/abs/2405.21060> "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality; ICML").
-- **Rotary position embeddings** - Encodes position through rotations of query and key vectors, making their dot products depend on relative position offsets; used inside attention rather than as added position vectors. [Su et al. 2024](<https://arxiv.org/abs/2104.09864> "RoFormer: Enhanced Transformer with Rotary Position Embedding; Neurocomputing").
+- **RWKV** - Pairs parallelizable training with recurrent decoding whose state size is independent of context length. Across 12 NLP tasks, models up to 14B parameters achieve average accuracy comparable to Pythia, OPT and BLOOM at similar training compute. [Peng et al. 2023](<https://aclanthology.org/2023.findings-emnlp.936/> "RWKV: Reinventing RNNs for the Transformer Era; Findings of EMNLP").
 - **DEER** - Evaluates nonlinear recurrences with parallel Newton solves over the sequence. Dense state Jacobians cost quadratic memory and cubic work in state width; speedups depend on sequence length, width and convergence. [Lim et al. 2024](<https://arxiv.org/abs/2309.12252v3> "Parallelizing non-linear sequential models over the sequence length; ICLR").
     - **Quasi-DEER and ELK** - Quasi-Newton approximations reduce DEER's state-width cost; ELK uses a trust-region/Kalman-smoothing connection to stabilize iterations. Tested chaotic dynamics can still favor sequential evaluation. [Gonzalez et al. 2024](<https://proceedings.neurips.cc/paper_files/paper/2024/hash/0b2b199fdd52089b31d3a0120e400b2a-Abstract-Conference.html> "Towards Scalable and Stable Parallelization of Nonlinear RNNs; NeurIPS").
+
+### Attention
+
+- **Transformer** - Builds sequence transduction around attention, removing recurrence and convolution from the architecture. The original encoder-decoder is evaluated on translation and parsing. [Vaswani et al. 2017](<https://arxiv.org/abs/1706.03762> "Attention Is All You Need; NeurIPS").
+- **Rotary position embeddings** - Encodes position through rotations of query and key vectors, making their dot products depend on relative position offsets; used inside attention rather than as added position vectors. [Su et al. 2024](<https://arxiv.org/abs/2104.09864> "RoFormer: Enhanced Transformer with Rotary Position Embedding; Neurocomputing").
+
+### Recurrent depth and adaptive computation
+
+- **Adaptive Computation Time (ACT)** - Learns how many recurrent updates to perform before each output, with a penalty for extra computation. Improves tested algorithmic tasks, while character-level Wikipedia modelling shows little gain. [Graves 2016](<https://arxiv.org/abs/1603.08983v6> "Adaptive Computation Time for Recurrent Neural Networks; arXiv").
+- **Universal Transformers** - Apply shared attention and transition layers repeatedly to all positions. Improve over Transformers on tested algorithmic and language tasks. Optional per-position halting helps structured tasks but slightly worsens translation. [Dehghani et al. 2019](<https://arxiv.org/abs/1807.03819v3> "Universal Transformers; ICLR").
+    - **MoEUT** - Combines shared layers with sparse experts. Tested 44M-1B language models reduce perplexity with fewer arithmetic operations than dense baselines. The reported implementation trains 1.5-2x slower than the dense FlashAttention baseline. [Csordás et al. 2024](<https://proceedings.neurips.cc/paper_files/paper/2024/hash/321387ba926b8e58d3591c0aeb52ffc2-Abstract-Conference.html> "MoEUT: Mixture-of-Experts Universal Transformers; NeurIPS").
+- **Huginn** - Repeats a shared Transformer core before each token. A 3.5B model trained on 800B tokens improves math and coding scores with more iterations. The 180B-token comparison matches parameters and data, not training compute. [Geiping et al. 2025](<https://proceedings.neurips.cc/paper_files/paper/2025/hash/3b01972cf31e6fa0fe29e4b8b5c2a0a1-Abstract-Conference.html> "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach; NeurIPS").
+
+### Continuous and implicit depth
+
+- **Neural ODEs** - Parameterizes hidden-state derivatives with a neural network and computes outputs with an ODE solver. Numerical tolerances and solver behavior become part of model execution. [Chen et al. 2018](<https://arxiv.org/abs/1806.07366> "Neural Ordinary Differential Equations; NeurIPS").
+- **Deep equilibrium models** - Finds a weight-tied network's equilibrium by root finding and differentiates it implicitly. Replaces an explicit stack of layers with a fixed-point computation. [Bai et al. 2019](<https://arxiv.org/abs/1909.01377> "Deep Equilibrium Models; NeurIPS").
+
+### Recurrence comparisons
+
+- **Recurrence and compute** - In 116 FineWeb-Edu runs at 20 effective layers, shared loops save parameters but increase validation loss at matched training compute. The trade-off changes with gradient truncation and hyperconnections. [Schwethelm et al. 2026](<https://arxiv.org/abs/2604.21106v3> "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models; arXiv").
 
 ## Reservoir computing
 
